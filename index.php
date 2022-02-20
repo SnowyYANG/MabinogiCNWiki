@@ -10,13 +10,13 @@ else require_once 'homepage.php';
 <html>
     <head>
         <meta charset="utf-8" />
-        <title><?php echo $title?$title.' - 洛奇百科':'洛奇百科'; ?></title>
+        <title><?php echo $title?$title.' - 洛奇wiki':'洛奇wiki'; ?></title>
         <link href="/main.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <div style="display:flex;aligen-items:stretch;min-height:100vh">
+        <div class="layout">
             <nav>
-                <a href="/"><h1>洛奇百科</h1></a>
+                <a href="/"><h1>洛奇wiki</h1></a>
                 <!--form action="/search" onsubmit="return !!this.s.value"><input name="s" style="width: 80%; margin:0 1em" placeholder="搜索 至少输入两个字" value=""></form-->
                 <div id="toc">
                     <ul>
@@ -24,11 +24,14 @@ else require_once 'homepage.php';
                     </ul>
                 </div>
             </nav>
-            <main>
-                <?php
-                if ($title) echo "<h2>$title</h2>";
-                view();
-                ?>
-            </main>
+            <div class="main-container">
+                <main>
+                    <?php
+                    if ($title) echo "<h2>$title</h2>";
+                    view();
+                    ?>
+                </main>
+                <footer><a href="https://beian.miit.gov.cn/">皖ICP备2022001590号-2</a></footer>
+            </div>
     </body>
 </html>

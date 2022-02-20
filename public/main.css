@@ -1,15 +1,21 @@
+body {
+    margin:0;
+}
+.layout {
+    display:flex;min-height:100vh
+}
 nav {
     width:10em;
     min-width:10em;
     border-right:dashed 1px rgba(91,75,42,0.3);
-    min-height:100vh
+    min-height:100%
 }
 h1 {
     font-size:200%;
     width:4.5em;
     padding:0 0.5em;
 }
-main {
+.main-container {
     flex-grow:99;
     padding:0 1rem;
     word-break:break-all;
@@ -17,6 +23,9 @@ main {
     max-width:100%;
     box-sizing:border-box;
     line-height:1.5
+}
+main {
+    min-height:calc(100% - 24px);
 }
 .option-blue {color:blue}
 .option-red {color:red}
